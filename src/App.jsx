@@ -11,7 +11,6 @@ function App() {
     <>
       <NavBar />
       <Hero />
-      <div className="h-dvh bg-black"></div>
     </>
   );
 }
