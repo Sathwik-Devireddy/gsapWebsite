@@ -20,7 +20,6 @@ const About = () => {
       },
     });
 
-    // Animate title words
     scrollTimeline
       .from(titleSplit.words, {
         opacity: 0,
@@ -29,7 +28,6 @@ const About = () => {
         ease: "expo.out",
         stagger: 0.02,
       })
-      // Animate the image grid boxes
       .from(".top-grid div, .bottom-grid div", {
         opacity: 0,
         y: 80,
@@ -40,13 +38,13 @@ const About = () => {
   });
 
   return (
-    <section id="about" className="px-5 md:px-0">
+    <section id="about" className="px-5 md:px-0 break-words">
       {/* Header section */}
       <div className="mb-16">
         <div className="content">
           <div className="md:col-span-8">
             <p className="badge">Best Mocktails</p>
-            <h2>
+            <h2 className="break-words">
               Where every detail matters <span className="text-white">-</span>{" "}
               from muddle to garnish
             </h2>
@@ -69,25 +67,48 @@ const About = () => {
         </div>
       </div>
 
-      {/* Image grid section */}
+      {/* ---------------- IMAGE GRID FIXED ---------------- */}
       <div className="grid md:grid-cols-12 gap-4 top-grid">
-        <div className="md:col-span-3 noisy">
-          <img src="/images/abt1.png" alt="Mocktail preparation" />
+        <div className="md:col-span-3 noisy overflow-hidden">
+          <img
+            src="/images/abt1.png"
+            alt="Mocktail preparation"
+            className="w-full h-auto block object-cover"
+          />
         </div>
-        <div className="md:col-span-6 noisy">
-          <img src="/images/abt2.png" alt="Bar setup" />
+
+        <div className="md:col-span-6 noisy overflow-hidden">
+          <img
+            src="/images/abt2.png"
+            alt="Bar setup"
+            className="w-full h-auto block object-cover"
+          />
         </div>
-        <div className="md:col-span-3 noisy">
-          <img src="/images/abt5.png" alt="Refreshing mocktail" />
+
+        <div className="md:col-span-3 noisy overflow-hidden">
+          <img
+            src="/images/abt5.png"
+            alt="Refreshing mocktail"
+            className="w-full h-auto block object-cover"
+          />
         </div>
       </div>
 
       <div className="grid md:grid-cols-12 gap-4 mt-6 bottom-grid">
-        <div className="md:col-span-8 noisy">
-          <img src="/images/abt3.png" alt="Drink presentation" />
+        <div className="md:col-span-8 noisy overflow-hidden">
+          <img
+            src="/images/abt3.png"
+            alt="Drink presentation"
+            className="w-full h-auto block object-cover"
+          />
         </div>
-        <div className="md:col-span-4 noisy">
-          <img src="/images/abt4.png" alt="Cocktail detail" />
+
+        <div className="md:col-span-4 noisy overflow-hidden">
+          <img
+            src="/images/abt4.png"
+            alt="Cocktail detail"
+            className="w-full h-auto block object-cover"
+          />
         </div>
       </div>
     </section>
