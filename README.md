@@ -127,13 +127,7 @@ This project is deployed on **Vercel** for seamless hosting and continuous deplo
 - [Vite Guide](https://vitejs.dev/guide/)
 - [ESLint Setup](https://eslint.org)
 
----
 
-## 📝 License
-
-This project is open source and available under the MIT License.
-
----
 
 ## 👤 Author
 
